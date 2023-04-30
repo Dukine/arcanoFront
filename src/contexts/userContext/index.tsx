@@ -2,23 +2,24 @@ import { createContext, useEffect, useState } from "react";
 import { ReactNode } from "react";
 
 import { Api } from "../../services";
+import { iUser } from "../../interfaces/user";
 
 interface iProvidersProps {
   children: ReactNode;
 }
 
 interface iUserContext {
-  user: any;
+  user: iUser | null;
 }
 
 export const UserContext = createContext({} as iUserContext);
 
 export const UserProvider = ({ children }: iProvidersProps) => {
-  const [user, setUser] = useState<any>(null);
+  const [user, setUser] = useState<iUser | null>(null);
 
   async function getUser() {
     try {
-      const { data } = await Api.get("cart-history");
+      const { data } = await Api.get<iUser>("cart-history");
       setUser(data);
     } catch (error) {
       setUser(null);
