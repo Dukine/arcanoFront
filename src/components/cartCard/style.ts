@@ -38,8 +38,8 @@ export const StyledCartCard = styled.li<iStyledCartCardProps>`
   .cart--itens {
     width: 100%;
 
-    animation: ${({ show }) => (show ? showItens : hideItens)} 500ms;
-    animation-fill-mode: forwards;
+    /* animation: ${({ show }) => (show ? showItens : hideItens)} 500ms;
+    animation-fill-mode: forwards; */
     display: ${({ show }) => (show ? "block" : "none")};
 
     overflow: hidden;

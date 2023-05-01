@@ -10,16 +10,13 @@ interface iCartProps {
 
 export const CartCard = ({ cart }: iCartProps) => {
   const [showItens, setShowItens] = useState<boolean>(false);
-  const [dropDown, setDropDown] = useState<boolean>(false);
 
   const handleClick = () => {
-    setDropDown(!dropDown);
     setShowItens(!showItens);
-    // setTimeout(() => setShowItens(!showItens), 999);
   };
 
   return (
-    <StyledCartCard show={dropDown}>
+    <StyledCartCard show={showItens}>
       <div className="cart--info">
         <p>ID: {cart.id}</p>
         <p>Data do pedido: {cart.date.split("T")[0]}</p>
@@ -35,13 +32,12 @@ export const CartCard = ({ cart }: iCartProps) => {
         </p>
         <Button onClick={handleClick}>ver mais</Button>
       </div>
-      {
-        <ul className="cart--itens">
-          {cart.products.map((product) => (
-            <ProductCard cartProduct={product} />
-          ))}
-        </ul>
-      }
+
+      <ul className="cart--itens">
+        {cart.products.map((product) => (
+          <ProductCard key={product.product.id} cartProduct={product} />
+        ))}
+      </ul>
     </StyledCartCard>
   );
 };

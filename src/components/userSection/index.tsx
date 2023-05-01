@@ -3,14 +3,20 @@ import { UserContext } from "../../contexts/userContext";
 import { StyledUserSection } from "./styles";
 
 export const UserSection = () => {
-  const { user } = useContext(UserContext);
+  const { user, loading } = useContext(UserContext);
 
   return (
-    user && (
-      <StyledUserSection>
-        <p>Nome: {user.name}</p>
-        <p>Email: {user.email}</p>
-      </StyledUserSection>
-    )
+    <StyledUserSection>
+      {user ? (
+        <>
+          <p>Nome: {user.name}</p>
+          <p>Email: {user.email}</p>
+        </>
+      ) : loading ? (
+        <p>Aguarde...</p>
+      ) : (
+        <p>Usuário não encontrado</p>
+      )}
+    </StyledUserSection>
   );
 };

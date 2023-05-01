@@ -10,20 +10,26 @@ interface iProvidersProps {
 
 interface iUserContext {
   user: iUser | null;
+  loading: boolean;
 }
 
 export const UserContext = createContext({} as iUserContext);
 
 export const UserProvider = ({ children }: iProvidersProps) => {
   const [user, setUser] = useState<iUser | null>(null);
+  const [loading, setLoading] = useState<boolean>(true);
 
-  async function getUser() {
+  async function getUser(id?: number) {
     try {
-      const { data } = await Api.get<iUser>("cart-history");
+      const { data } = await Api.get<iUser>(
+        `cart-history${id ? `?id=${id}` : ``}`
+      );
       setUser(data);
     } catch (error) {
       setUser(null);
       console.log(error);
+    } finally {
+      setLoading(false);
     }
   }
 
@@ -32,6 +38,8 @@ export const UserProvider = ({ children }: iProvidersProps) => {
   }, []);
 
   return (
-    <UserContext.Provider value={{ user }}>{children}</UserContext.Provider>
+    <UserContext.Provider value={{ user, loading }}>
+      {children}
+    </UserContext.Provider>
   );
 };
