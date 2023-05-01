@@ -8,8 +8,8 @@ export const UserSection = () => {
   return (
     user && (
       <StyledUserSection>
-        <p>{user.name}</p>
-        <p>{user.email}</p>
+        <p>Nome: {user.name}</p>
+        <p>Email: {user.email}</p>
       </StyledUserSection>
     )
   );
