@@ -34,7 +34,7 @@ export const UserProvider = ({ children }: iProvidersProps) => {
   }
 
   useEffect(() => {
-    getUser();
+    getUser(1);
   }, []);
 
   return (

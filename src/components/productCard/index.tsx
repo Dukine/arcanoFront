@@ -12,7 +12,7 @@ export const ProductCard = ({ cartProduct }: iCartProps) => {
         <img src={cartProduct.product.image} alt={cartProduct.product.title} />
       </div>
       <div className="product--description">
-        <p className="product--title">{cartProduct.product.title}</p>
+        <h3 className="product--title">{cartProduct.product.title}</h3>
         <p className="product--info">
           <span>Qntd: {cartProduct.quantity}</span>{" "}
           <span>

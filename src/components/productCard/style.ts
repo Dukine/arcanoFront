@@ -36,6 +36,9 @@ export const StyledProductCard = styled.li`
     }
 
     .product--title {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
     }
 
     .product--info {
