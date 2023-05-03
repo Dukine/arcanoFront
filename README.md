@@ -1,4 +1,14 @@
-# Getting Started with Create React App
+# Teste Pratico Arcano
+
+Backend repository: https://github.com/Dukine/arcanoBack
+
+Url for this aplication: http://localhost:3000
+
+Start with `yarn start`
+
+# Create React App Documentation
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
