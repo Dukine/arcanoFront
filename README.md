@@ -22,6 +22,11 @@ For docker use `docker-compose up`
 
 Url for this aplication: http://localhost:3000
 
+## Testing Cypress
+
+Start the app(backend and frontend)\
+Use `yarn cypress`
+
 # Create React App Documentation
 
 ## Getting Started with Create React App

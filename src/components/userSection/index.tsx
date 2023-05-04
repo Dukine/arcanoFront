@@ -6,7 +6,7 @@ export const UserSection = () => {
   const { user, loading } = useContext(UserContext);
 
   return (
-    <StyledUserSection>
+    <StyledUserSection className="section--user">
       {user ? (
         <>
           <p>Nome: {user.name}</p>

@@ -9,7 +9,7 @@ export const UserHistory = () => {
 
   return (
     user && (
-      <StyledUserHistory>
+      <StyledUserHistory className="section--history">
         <ul>
           {user.history.map((cart: iCart) => (
             <CartCard key={cart.id} cart={cart} />
