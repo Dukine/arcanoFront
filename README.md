@@ -17,7 +17,7 @@ Backend repository: https://github.com/Dukine/arcanoBack
 
 ## Starting
 
-Start with `yarn install` and `yarn start`
+Start with `yarn install` and `yarn start`\
 For docker use `docker-compose up`
 
 Url for this aplication: http://localhost:3000
