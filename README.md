@@ -2,7 +2,7 @@
 
 ## About
 
-Backend of the practical test proposed by Arcano Projetos.
+Frontend of the practical test proposed by Arcano Projetos.
 The project uses public data from 'fakestoreapi' to search for a user and return their cart history.
 
 Techs used:
