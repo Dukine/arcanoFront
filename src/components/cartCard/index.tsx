@@ -19,7 +19,7 @@ export const CartCard = ({ cart }: iCartProps) => {
     <StyledCartCard show={showItens}>
       <div className="cart--info">
         <p>ID: {cart.id}</p>
-        <p>Data do pedido: {cart.date.split("T")[0]}</p>
+        <p>Data: {cart.date.split("T")[0]}</p>
         <p>
           Valor Total: R$
           {cart.products
