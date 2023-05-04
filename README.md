@@ -1,10 +1,26 @@
 # Teste Pratico Arcano
 
+## About
+
+Backend of the practical test proposed by Arcano Projetos.
+The project uses public data from 'fakestoreapi' to search for a user and return their cart history.
+
+Techs used:
+
+<ul>
+<li>React</li>
+<li>Axios</li>
+<li>styled-components</li>
+</ul>
+
 Backend repository: https://github.com/Dukine/arcanoBack
 
-Url for this aplication: http://localhost:3000
+## Starting
 
-Start with `yarn start`
+Start with `yarn install` and `yarn start`
+For docker use `docker-compose up`
+
+Url for this aplication: http://localhost:3000
 
 # Create React App Documentation
 
